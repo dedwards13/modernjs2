@@ -41,20 +41,41 @@ function getJson() {
 
 
 // Get from external API
+// function getExternal() {
+//   fetch('https://api.github.com/users')
+//     .then(function (res) {
+//       return res.json();
+//     })
+//     .then(function (data) {
+//       console.log(data);
+//       let output = '';
+//       data.forEach(function (user) {
+//         output += `<li>${user.login}</li>`;
+//       });
+//       document.getElementById('output').innerHTML = output;
+//     })
+//     .catch(function (err) {
+//       console.log(err);
+//     });
+// }
+
+// Handling http errors
+function handleErrors(res) {
+  if (!res.ok) {
+    return Promise.reject(res);
+  } else {
+    return res.json();
+  }
+
+}
+
 function getExternal() {
   fetch('https://api.github.com/users')
-    .then(function (res) {
-      return res.json();
+    .then(handleErrors)
+    .then(data => {
+      let list = '';
+      data.forEach(user => (list += `<li>${user.login}</li>`));
+      output.innerHTML = list;
     })
-    .then(function (data) {
-      console.log(data);
-      let output = '';
-      data.forEach(function (user) {
-        output += `<li>${user.login}</li>`;
-      });
-      document.getElementById('output').innerHTML = output;
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
+    .catch(console.log);
 }

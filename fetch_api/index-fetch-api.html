@@ -10,10 +10,15 @@
     />
     <title>Fetch API Ajax Sandbox</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
       nav {
         align-items: center;
         display: flex;
         justify-content: center;
+
         margin: 0;
         padding: 0;
         background: linear-gradient(to bottom, #89fffd, #ef32d9);
@@ -21,7 +26,7 @@
       }
       ol {
         list-style-type: none;
-        /* padding-top: 2rem; */
+        flex-direction: column;
       }
       li,
       a {
@@ -44,6 +49,14 @@
         <li class="hover">
           <a href="../index.html">Home</a>
         </li>
+        <li class="hover">
+          <a href="index-fetch-api.html">Fetch APIs</a>
+        </li>
+        <li class="hover">
+          <a href="./arrow_functions/index_arrow_functions.html"
+            >Arrow Functions</a
+          >
+        </li>
       </ol>
     </nav>
     <div class="container">
@@ -54,9 +67,31 @@
       <button id="button3">Get API Data</button>
       <br /><br />
       <div id="output"></div>
+
+      <h2>Error Handling with Fetch .catch</h2>
+      <p>
+        Error handling with fetch is different from jQuery. If there is an http
+        error it will not fire off .catch automatically.
+      </p>
+      <p>
+        You have to check the response and throw an error. Creat a separate
+        function for error handling.
+      </p>
+      <code>
+        function handleErrors(res) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;if (!res.ok) throw new Error(res.error);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;return res;<br />
+        }<br />
+        <br />
+        fetch('https://devcamper.io/api/v1/bootcamps/34343')<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;.then(res => res.json())<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;.then(handleErrors)<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;.then(res => console.log(res.data))<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;.catch(err => console.log(err));<br />
+      </code>
     </div>
 
-    <script src="nav.js"></script>
-    <script src="app.js"></script>
+    <script src="../nav.js"></script>
+    <script src="app_fetch_api.js"></script>
   </body>
 </html>
