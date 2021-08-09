@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern JS 2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Modern JS Course From The Beginning</h1>
+    <!-- <h2>Async Ajax Fetch API</h2> -->
+    <h3>Brad Traversy</h3>
+
+    <nav>
+      <ol class="menu">
+        <li class="hover">
+          <a href="./fetch_api/index.html"
+            >Section 7 <small> - Fetch API</small></a
+          >
+        </li>
+        <li class="hover">Section 8</li>
+        <li class="hover">Section 9</li>
+        <li class="hover">Section 10</li>
+        <li class="hover">Section 11</li>
+        <li class="hover">Section 12</li>
+        <li class="hover hover--blue">Section 13</li>
+      </ol>
+    </nav>
+
+    <script>
+      Array.from(document.querySelectorAll(".hover"), function (el) {
+        el.addEventListener("mousemove", function (e) {
+          el.style.setProperty("--px", e.clientX - el.offsetLeft);
+          el.style.setProperty("--py", e.clientY - el.offsetTop);
+        });
+      });
+    </script>
+  </body>
+</html>

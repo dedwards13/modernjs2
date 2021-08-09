@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+.hover {
+    background: #242424;
+    background: rgba(36, 36, 36, 0.3);
+    color: magenta;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+    border-bottom: solid 1px #333;
+    z-index: 2;
+    transition: background-color 0.2s linear;
+    font-family: Lato, sans-serif;
+}
+
+li:nth-child(even) {
+    color: cyan;
+}
+
+.hover:before,
+.hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.1s linear;
+}
+
+.hover:before {
+    width: 160px;
+    height: 120px;
+    background: radial-gradient(circle at center, #fff 0%, transparent 60%);
+    opacity: 0;
+    mix-blend-mode: screen;
+    transform: translate(calc(var(--px) * 1px), calc(var(--py) * 1px)) translate(-50%, -50%);
+}
+
+.hover:after {
+    background: inherit;
+    margin: 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition-delay: 0.05s;
+}
+
+.hover:hover {
+    background-color: rgba(56, 56, 56, 0.9);
+}
+
+.hover:hover:before {
+    opacity: 0.6;
+}
+
+.hover:hover:after {
+    opacity: 0.85;
+    transition-delay: 0s;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.hover--blue:hover {
+    background-color: #24455e;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.menu {
+    overflow: hidden;
+    width: 15em;
+    border-radius: 3px;
+    opacity: 0.958;
+    padding: 0;
+}
+
+.menu :last-child {
+    margin-bottom: 0;
+}
+
+html {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+body {
+    max-width: 90%;
+    margin: auto;
+    font-family: Lato, sans-serif;
+    color: #ef32d9;
+}
+
+body:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: #ef32d9;
+    background: -webkit-linear-gradient(to top,
+            #89fffd,
+            #ef32d9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,
+            #89fffd,
+            #ef32d9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    z-index: -1;
+    opacity: 0.9;
+    margin: -7px;
+    filter: blur(6px);
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
