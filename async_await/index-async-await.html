@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
     />
-    <title>HTTP Library Fetch w/ Promises</title>
+    <title>Async & Await</title>
     <style>
       body {
         margin: 0;
@@ -78,10 +78,12 @@
           >
         </li>
         <li class="hover">
-          <a href="#">Custom Library</a>
+          <a href="../http_library_fetch_promises/index_http_library_fetch.html"
+            >Custom Library</a
+          >
         </li>
         <li class="hover">
-          <a href="../async_await/index-async-await.html">Async & Await</a>
+          <a href="#">Async & Await</a>
         </li>
         <li class="hover">
           <a href="../library-final/index-library-final.html"
@@ -91,12 +93,31 @@
       </ol>
     </nav>
     <div class="container">
-      <h1>HTTP Library Fetch w/ Promises</h1>
+      <h1>Async & Await</h1>
+
+      <p>
+        Putting async in front of function creates a promise and can now use
+        .then()
+      </p>
+      <code>
+        async function getUsers() { <br />
+        // await response of the fetch call<br />
+        &nbsp;&nbsp;&nbsp;const response = await<br />
+        &nbsp;&nbsp;&nbsp;fetch('https://jsonplaceholder.typicode.com/users');<br />
+        <br />
+        // Only proceed once its resolved<br />
+        &nbsp;&nbsp;&nbsp;const data = await response.json();<br />
+        <br />
+        // only proceed once second promise is resolved<br />
+        &nbsp;&nbsp;&nbsp;return data;<br />
+        }<br />
+        <br />
+        getUsers().then(users => console.log(users));
+      </code>
 
       <div id="output"></div>
       <!-- end of container -->
     </div>
-    <script src="./EasyHTTP.js"></script>
-    <script src="./app_http_library.js"></script>
+    <script src="./app_async_await.js"></script>
   </body>
 </html>

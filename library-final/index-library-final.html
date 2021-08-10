@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
     />
-    <title>Fetch API Ajax Sandbox</title>
+    <title>Async & Await</title>
     <style>
       body {
         margin: 0;
@@ -41,14 +41,25 @@
         color: cyan;
       }
 
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 5rem;
+      }
+
       code {
         width: fit-content;
         margin: 2rem;
         font-size: medium;
       }
 
-      .container {
-        margin-top: 5rem;
+      h5,
+      p {
+        margin-bottom: 0;
+      }
+      div.output {
+        color: magenta;
       }
     </style>
   </head>
@@ -56,13 +67,13 @@
     <nav>
       <ol class="menu">
         <li class="hover">
-          <a href="../index.html">Home</a>
+          <a href="../../index.html">Home</a>
         </li>
         <li class="hover">
-          <a href="index-fetch-api.html">Fetch APIs</a>
+          <a href="../fetch_api/index-fetch-api.html">Fetch APIs</a>
         </li>
         <li class="hover">
-          <a href="./arrow_functions/index_arrow_functions.html"
+          <a href="../fetch_api/arrow_functions/index_arrow_functions.html"
             >Arrow Functions</a
           >
         </li>
@@ -75,46 +86,19 @@
           <a href="../async_await/index-async-await.html">Async & Await</a>
         </li>
         <li class="hover">
-          <a href="../library-final/index-library-final.html"
-            >Library-Fetch Async Await</a
-          >
+          <a href="#">Library-Fetch Async Await</a>
         </li>
       </ol>
     </nav>
     <div class="container">
-      <h1>Fetch API</h1>
-      <p>Using ES6</p>
-      <button id="button1">Get Text</button>
-      <button id="button2">Get JSON</button>
-      <button id="button3">Get API Data</button>
-      <br /><br />
+      <h1>Custom HTTP Library using Fetch with Async & Await</h1>
+
       <div id="output"></div>
 
-      <h2>Error Handling with Fetch .catch</h2>
-      <p>
-        Error handling with fetch is different from jQuery. If there is an http
-        error it will not fire off .catch automatically.
-      </p>
-      <p>
-        You have to check the response and throw an error. Creat a separate
-        function for error handling.
-      </p>
-      <code>
-        <br />
-        function handleErrors(res) {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;if (!res.ok) throw new Error(res.error);<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;return res;<br />
-        }<br />
-        <br />
-        fetch('https://devcamper.io/api/v1/bootcamps/34343')<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;.then(res => res.json())<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;.then(handleErrors)<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;.then(res => console.log(res.data))<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;.catch(err => console.log(err));<br />
-      </code>
+      <!-- end of container -->
     </div>
 
-    <script src="../nav.js"></script>
-    <script src="app_fetch_api.js"></script>
+    <script src="easyhttp3.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
