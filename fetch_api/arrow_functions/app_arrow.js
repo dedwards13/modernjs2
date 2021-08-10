@@ -4,8 +4,6 @@ let output2 = '';
 let output3 = '';
 let output4 = '';
 let output5 = '';
-let output6 = '';
-let output7 = '';
 
 // One line function:
 const sayHello = () => 'Say Hello!';
@@ -39,3 +37,30 @@ output3 = `<p>${ sayHello3b() }</p>`;
 document.getElementById('output3').innerHTML = sayHello3b('Michelle');
 output3 = `<p>${ sayHello3b('Michelle') }</p>`;
 document.getElementById('output3').innerHTML = sayHello3b('Michelle');
+
+// If you have more than one parameter then you must use (parm1, parm2)
+// const sayHello4 = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
+const sayHello4 = (firstName, lastName) => document.getElementById('output4').innerHTML = `Hello ${firstName} ${lastName}`;
+
+output4 = sayHello4('Michelle', 'Jones');
+document.getElementById('output4').innerHTML = 'Hey ' + output4;
+
+
+
+// Arrow Functions as Callbacks
+const users = ['Nathan', 'John', 'William', 'Jennifer'];
+
+// long way to code function
+// const nameLengths = users.map(function (name) {
+//     return name.length;
+// });
+
+// shorter way to write
+// const nameLengths = users.map((name) => {
+//     return name.length;
+// });
+
+// shortest way to write
+const nameLengths = users.map(name => name.length);
+console.log(nameLengths);
+document.getElementById('output5').innerText = nameLengths;

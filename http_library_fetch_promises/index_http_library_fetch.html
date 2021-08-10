@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <title>HTTP Library Fetch w/ Promises</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #89fffd, #ef32d9);
+        width: 100%;
+        height: 50px;
+      }
+      ol {
+        list-style-type: none;
+        /* padding-top: 2rem; */
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      li,
+      a {
+        color: black;
+        text-decoration: none;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      li:nth-child(even) {
+        color: cyan;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 5rem;
+      }
+
+      code {
+        width: fit-content;
+        margin: 2rem;
+        font-size: medium;
+      }
+
+      h5,
+      p {
+        margin-bottom: 0;
+      }
+      div.output {
+        color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ol class="menu">
+        <li class="hover">
+          <a href="../../index.html">Home</a>
+        </li>
+        <li class="hover">
+          <a href="../fetch_api/index-fetch-api.html">Fetch APIs</a>
+        </li>
+        <li class="hover">
+          <a href="../fetch_api/arrow_functions/index_arrow_functions.html"
+            >Arrow Functions</a
+          >
+        </li>
+        <li class="hover">
+          <a href="#">Custom Library</a>
+        </li>
+      </ol>
+    </nav>
+    <div class="container">
+      <h1>HTTP Library Fetch w/ Promises</h1>
+
+      <div id="output"></div>
+      <!-- end of container -->
+    </div>
+    <script src="./EasyHTTP.js"></script>
+    <script src="./app_http_library.js"></script>
+  </body>
+</html>

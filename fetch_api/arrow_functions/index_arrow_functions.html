@@ -34,6 +34,7 @@
         color: black;
         text-decoration: none;
         align-items: center;
+        margin-top: 1rem;
       }
 
       li:nth-child(even) {
@@ -72,7 +73,13 @@
           <a href="../index-fetch-api.html">Fetch APIs</a>
         </li>
         <li class="hover">
-          <a href="index_arrow_functions.html">Arrow Functions</a>
+          <a href="#">Arrow Functions</a>
+        </li>
+        <li class="hover">
+          <a
+            href="../../http_library_fetch_promises/index_http_library_fetch.html"
+            >Custom Library</a
+          >
         </li>
       </ol>
     </nav>
@@ -110,6 +117,33 @@
         sayHello3('Michelle'); // calling function
       </code>
       <div id="output3" class="output"></div>
+      <p>
+        If you have more than one parameter then you must use (parm1, parm2)
+      </p>
+      <code>
+        const sayHello = (firstName, lastName) => console.log(`Hello
+        ${firstName} ${lastName}`);
+      </code>
+      <div id="output4" class="output"></div>
+
+      <h5>Arrow Functions & Callbacks</h5>
+      <code>
+        const users = ['Nathan', 'John', 'William', 'Jennifer']; <br />
+        <br />
+        const nameLengths = users.mat(function(name) {<br />
+        &nbsp;&nbsp;&nbsp;return name.legth;<br />
+        });
+      </code>
+      <p>Shorter way to write</p>
+      <code>
+        const nameLengths = users.map((name) => {<br />
+        &nbsp;&nbsp;&nbsp;return name.length;<br />
+        });
+      </code>
+      <p>Shortest way to write</p>
+      <code>const nameLengths = users.map(name => name.length);</code>
+      <p>displays the lengths of the names</p>
+      <div id="output5" class="output"></div>
 
       <!-- end of container -->
     </div>
