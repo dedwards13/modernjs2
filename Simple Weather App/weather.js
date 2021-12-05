@@ -2,7 +2,7 @@ const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner msg");
 const list = document.querySelector(".ajax-section .cities");
-const apiKey = '1d04cee8b1f03df6a939a49a136b8f12';
+const apiKey = '';
 let inputVal = input.value;
 
 // form submit 
