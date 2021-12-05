@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="weather-styles.css" /> -->
+    <title>Weather Simple App</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #89fffd, #ef32d9);
+        width: 100%;
+        height: 50px;
+        color: white;
+    }
+
+    ul {
+        list-style-type: none;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    ul>li,
+    a {
+        color: black;
+        text-decoration: none;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    nav {
+        font-family: monospace;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    li {
+        color: #fff;
+        display: block;
+        float: left;
+        padding: 1rem;
+        position: relative;
+        text-decoration: none;
+        transition-duration: 0.5s;
+    }
+
+    li a {
+        color: #fff;
+    }
+
+    li:hover,
+    li:focus-within {
+        background: linear-gradient(to bottom, #89fffd, #ef32d9);
+        cursor: pointer;
+        border: 0.5px solid white;
+    }
+
+    li:focus-within a {
+        outline: none;
+    }
+
+    ul li ul {
+        background: linear-gradient(to bottom, #89fffd, #ef32d9);
+        visibility: hidden;
+        opacity: 0;
+        min-width: 5rem;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: none;
+    }
+
+    ul li:hover>ul,
+    ul li:focus-within>ul,
+    ul li ul:hover,
+    ul li ul:focus {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    ul li ul li {
+        clear: both;
+        width: 100%;
+    }
+
+    ul>li,
+    a.dropdown {
+        border-radius: 1rem;
+    }
+
+    /* content */
+    main {
+        margin: 2rem;
+    }
+
+    h4 {
+        margin-top: 2rem;
+    }
+</style>
+
+<body>
+    <div class="api">
+        <nav>
+            <ul class="menu">
+                <li class="hover">
+                    <a href="../../index.html">Home</a>
+                </li>
+
+                <li class="hover">
+                    <a href="../../index.html">Section 7</a>
+                    <ul class="dropdown">
+                        <li class="hover">
+                            <a href="index-fetch-api.html">Fetch APIs</a>
+                        </li>
+                        <li class="hover">
+                            <a href="./arrow_functions/index_arrow_functions.html">Arrow Functions</a>
+                        </li>
+                        <li class="hover">
+                            <a href="../http_library_fetch_promises/index_http_library_fetch.html">Custom Library</a>
+                        </li>
+                        <li class="hover">
+                            <a href="../async_await/index-async-await.html">Async & Await</a>
+                        </li>
+                        <li class="hover">
+                            <a href="../library-final/index-library-final.html">Library-Fetch Async Await</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="hover">
+                    <a href="../../index.html">Section 8</a>
+                    <ul class="dropdown">
+                        <li class="hover">
+                            <a href="../repofinder/index.html">Github Finder</a>
+                        </li>
+                        <li class="hover">
+                            <a href="../weather/index.html">Weather</a>
+                        </li>
+                        <li class="hover">
+                            <a href="../Simple Weather App/weather_index.html">Simple Weather</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="hover">
+                    <a href="#">Section 9</a>
+                    <ul class="dropdown">
+                        <li class="hover">
+                            <a href="#">Errors & Regular Expressions</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <main>
+            <code>
+                let re;<br>
+                re = /hello/ <br>
+                let re;<br>
+                re = /hello/i; // i = case insensitive<br>
+                re = /hello/g; // g = global search<br>
+            </code><br>
+            <p>Note: must put reg expression between /</p>
+            <p>re \t shows /expression/ with slashes</p>
+            <p>re.source \t shows just expression</p>
+
+            <h4>exec() - Return result in an array or null</h4>
+
+        </main>
+
+        <script src="errors.js"></script>
+</body>
+
+</html>
