@@ -12,6 +12,7 @@
 // const UICtrl = (function() {
 //   let text = 'Hello World';
 
+// Function expression:
 //   const changeText = function() {
 //     const element = document.querySelector('h1');
 //     element.textContent = text;

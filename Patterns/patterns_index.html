@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patterns</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+
+<body class="m-5">
+    <h1 class="mt-5">What is a Pattern?</h1>
+    <ul>
+        <li>A reusable solution that can be applied to occurring problems in software design (JavaScript Applications)
+        </li>
+        <li>Can also be thought of as programming templates </li>
+        <li>Situations vary significantly</li>
+    </ul>
+    <h2 class="mt-5">Module</h2>
+    <p>Used for overall structure. Allows us to break our code up into modules or we can have private or public
+        functions & variables</p>
+    <code>
+        // Basic Module structure<br>
+        (function() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;// Declare private vars & functions<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    // Declare public vars & functions<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        })();
+    </code>
+
+    <h2 class="mt-5">Revealing Module Pattern</h2>
+    <p></p>
+
+    <h2 class="mt-5">Singleton</h2>
+    <p>The Singleton pattern is kind of a variation of the module pattern where we can only create one instance of an
+        object, </p>
+    <p>A Singleton object is an immediate anonymous function, and it can only return one instance of an object at a
+        time.
+        Now, an example of why you may want to use a singleton is maybe you only want, for instance, one
+
+        user object created at a time, maybe a logged in user.
+
+        It would prevent you from having two users from being created at once.
+
+        Now, oftentimes, singletons are frowned upon because they give you a global point of access rather
+
+        than embracing encapsulation.</p>
+
+    <h2 class="mt-5">Factory</h2>
+    <p>The factory pattern is used to create many, many objects.</p>
+    <p>Also called the factory method in JavaScript, which is a way of creating an interface for creating objects. But
+        we can let subclasses define which classes to instantiate.And factory methods are often used in applications to manage and maintain and manipulate collectionsof objects that are different, but at the same time have many common characteristics.</p>
+
+    <h2 class="mt-5">Observer</h2>
+    <p>The observer pattern allows us to basically subscribe and unsbuscribe to events.</p>
+    <p>It can be used to notify the dome of certain elements to be updated and actually angular JS relies heavily on this pattern through event management within the scope.</p>
+    <a class="mb-3" href="./observer pattern/index.html">See example</a>
+
+    <h2 class="mt-5">Mediator</h2>
+    <p>The mediator pattern has a central mediator and then it has colleagues that separate off from it.</p>
+
+    <h2 class="mt-5">State</h2>
+    <p>The state pattern allows us to have a certain state in our application and we can change the state.</p>
+    <a class="mb-3" href="state pattern/statePatternIndex.html">See state pattern example</a>
+
+
+
+
+
+    <script src="pattern_factory.js"></script>
+    <script src="pattern_mediator.js"></script>
+    <script src="pattern_module.js"></script>
+    <script src="pattern_singleton.js"></script>
+</body>
+
+</html>
